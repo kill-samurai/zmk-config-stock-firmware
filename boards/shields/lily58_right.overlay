@@ -1,1 +1,15 @@
 
+&adc {
+    status = "okay";
+};
+
+/ {
+    battery: battery {
+        compatible = "voltage-divider";
+        io-channels = <&adc 0>;
+        output-ohms = <100000>;
+        full-ohms = <100000>;
+        label = "BATTERY_RIGHT";
+        status = "okay";
+    };
+};
